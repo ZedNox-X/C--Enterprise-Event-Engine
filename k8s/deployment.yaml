@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: event-engine}
+spec:
+  replicas: 3
+  selector: {matchLabels: {app: event-engine}}
+  template:
+    metadata: {labels: {app: event-engine}}
+    spec:
+      containers:
+        - name: event-engine
+          image: cpp-enterprise-event-engine:latest
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true}
+          resources:
+            requests: {cpu: 250m, memory: 128Mi}
+            limits: {cpu: "2", memory: 512Mi}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: event-engine}
+spec:
+  selector: {app: event-engine}
+  ports: [{port: 8080, targetPort: 8080}]

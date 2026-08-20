@@ -1,0 +1,2 @@
+#include "engine/thread_pool.hpp"
+namespace engine { ThreadPool::ThreadPool(std::size_t n,std::size_t c):q_(c){w_.reserve(n);for(std::size_t i=0;i<n;++i)w_.emplace_back([this](std::stop_token s){while(!s.stop_requested()){auto f=q_.pop(s);if(!f)break;try{(*f)();}catch(...){}}});} ThreadPool::~ThreadPool(){stop();} bool ThreadPool::submit(std::function<void()> f){return q_.push(std::move(f));} void ThreadPool::stop(){q_.close();for(auto& t:w_)t.request_stop();w_.clear();} }

@@ -1,0 +1,10 @@
+services:
+  event-engine:
+    build: .
+    restart: unless-stopped
+    depends_on: [postgres, redis]
+  postgres:
+    image: postgres:16-alpine
+    environment: {POSTGRES_DB: events, POSTGRES_USER: events, POSTGRES_PASSWORD: events}
+  redis:
+    image: redis:7-alpine
