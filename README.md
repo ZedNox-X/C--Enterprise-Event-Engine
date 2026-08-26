@@ -3,7 +3,7 @@
 Production-oriented C++20 event-processing platform demonstrating systems programming, concurrency, performance engineering, observability, testing, containers, and cloud-native deployment.
 
 ## Highlights
-- Modern C++20, RAII and explicit ownership
+- Modern C++20, RAII and explicit ownership.
 - Bounded producer/consumer queue with `std::jthread`
 - Concurrent worker pool and pluggable rule engine
 - PostgreSQL/Redis integration boundaries
