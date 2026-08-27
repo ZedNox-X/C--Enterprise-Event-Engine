@@ -51,4 +51,4 @@ docker compose up --build
 Add Boost.Asio/Beast networking, libpqxx PostgreSQL adapter, Redis adapter, OpenTelemetry, authenticated APIs, mTLS, durable event transport, Kubernetes HPA/KEDA, image scanning and full integration/E2E environments.
 
 ## License
-MIT
+
