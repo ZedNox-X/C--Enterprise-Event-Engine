@@ -15,6 +15,9 @@ Production-oriented C++20 event-processing platform demonstrating systems progra
 - Docker and Kubernetes deployment
 - GitHub Actions CI
 
+- <img width="1536" height="1024" alt="C++ Enterprise Event Engine Infographic" src="https://github.com/user-attachments/assets/8434ea38-61ea-4cb1-8bc8-b519168f9483" />
+
+
 > Portfolio/reference implementation. External device actions are simulated.
 
 ## Architecture
