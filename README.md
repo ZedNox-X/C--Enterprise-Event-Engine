@@ -54,4 +54,5 @@ docker compose up --build
 ## Production roadmap
 Add Boost.Asio/Beast networking, libpqxx PostgreSQL adapter, Redis adapter, OpenTelemetry, authenticated APIs, mTLS, durable event transport, Kubernetes HPA/KEDA, image scanning and full integration/E2E environments.
 Version 1.0.22
-Updated on 21-09-2026 by Melbin George
+Updated on 25-09-2026 by Melbin George
+
